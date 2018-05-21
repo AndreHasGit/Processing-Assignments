@@ -1,0 +1,36 @@
+// setting it up 
+void setup(){
+  size(560,960);
+  background(255);
+  colorMode(HSB,255,255,255);
+  noStroke();
+}
+
+//my variables
+float a = 0;
+
+float b = 0;
+
+
+// all the smaller circles
+void draw(){
+   a = 0;
+  for (int i = 0; i < 16; i ++){
+ a = a + 24;
+ b = 0;
+  for (int e = 0; e < 16; e++){
+  b = b + 24;
+ fill(b,a,a+b);
+ ellipse(a,b,22,22);
+ }
+}
+  
+  
+  
+//the code for the circles and what makes it look pretty  
+for (int c = 255; c > 0; c--){
+fill(100 + c % 255, 100 + c % 255, 255);
+
+ellipse(200,600,c,c);
+}
+}
