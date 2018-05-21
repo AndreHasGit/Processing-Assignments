@@ -1,0 +1,120 @@
+/*
+Andrew Gorceas program 
+Grade 11 class, Mr.o
+Assignment 1 
+*/
+
+
+
+float a = 35;// variable for a positioning for x of a rect
+float b = 90;//another  variable for a positioning for x of a rect
+float c = 10;//another  variable for a positioning for x of a rect
+float d = 50;//another  variable for a positioning for x of a rect
+float e = 80;//another  variable for a positioning for x of a rect
+float f = 90;//another  variable for a positioning for x of a rect
+
+
+
+void setup() {
+  //Setting the size and getting the second applet to work 
+  size(100, 100);
+  String[] args = {"AHHHH"};
+  SecondApplet sa = new SecondApplet();
+  PApplet.runSketch(args, sa);
+}
+
+ //Here is all the code for the first applet 
+void draw() {
+background(255);
+stroke(0);
+  
+  //all of the rectangles 
+  rect(a,40,30,30);
+  rect(b,10,90,90);
+  rect(a,60,90,50);
+  rect(c,50,10,10);
+  rect(c,10,10,10);
+  rect(d,50,10,10);
+  rect(e,80,10,10);
+  rect(f,90,10,10);
+  
+ //Setting the stroke and fill
+  stroke(0);
+  fill(255);
+  
+  
+  //If a certain art of the first applet screen(the square in the midle) a secret message will show
+                   if(mousePressed){
+  if(mouseX>35 && mouseX <35+30 && mouseY>40 && mouseY <40+30){
+   fill(random(123), random(255), random(123), random(355));
+   
+  }
+ } 
+ 
+ //code for the secret message, it works together with the code above :)
+ textSize(11);
+ text("HIDDEN SECRET", 10, 30); 
+ fill(255);
+}     
+
+
+ //below is all the code for the second applet
+public class SecondApplet extends PApplet {
+ 
+  //setting it up
+  public void settings() {
+    size(630, 200);
+  }
+  
+  
+  public void draw() {
+    background(255);
+    fill(0);
+     textSize(32);
+     
+     //The question
+     text("What is the answer to 845 divided by 5", 10, 30); 
+   
+       fill(255);
+       //the rectangles
+       rect(200,50,50,50);
+       rect(350,50,50,50);
+       fill(0);
+       textSize(20);
+       //the number for the possible answer 
+       //corect
+       text("169",205,84);
+       //wrong
+       text("157",355,84);
+    
+       
+
+//for if you click on the correct answer box
+ if(mousePressed){
+  if(mouseX>200 && mouseX <200+50 && mouseY>50 && mouseY <50+50){
+   fill(random(123), random(255), random(123), random(355));
+ textSize(30);
+ text("Correct", 150, 150); 
+ fill(255);
+ 
+ 
+  }
+ } 
+
+
+//for if you click on the wrong answer box
+ if(mousePressed){
+  if(mouseX>350 && mouseX <350+50 && mouseY>50 && mouseY <50+50){
+   fill(random(123), random(255), random(123), random(355));
+
+
+textSize(30);
+ text("Wrong", 350, 150); 
+ fill(255);
+  }
+ } 
+
+
+
+  }
+}
