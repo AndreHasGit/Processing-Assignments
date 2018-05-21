@@ -1,0 +1,147 @@
+String sentence = "I ate all of the sOUP IN THE MORNGNEWH buh buh buhhhhhh hi ate chicken! I had a penguin  "; 
+
+
+//Bunch of variables i made to fit the below code
+int ML; 
+int index;
+int NumberOC;
+int NumberOP;
+int NumberOV;
+int NumberOW;
+
+
+//setting the size
+void settings(){
+  size(950,420);
+}
+//Setting up the background and text for the sentance specifically
+void setup(){
+  background(255);
+  textSize(30);
+  
+//length of the entire sentance in characters
+sl();
+
+//amount of capitals in the entire sentance
+Cs();
+
+//The entire amount of vowel in the entire sentance
+Vs();
+
+//Amount of words in the entire sentance
+Ws(); 
+
+//The entire amoubnt of punctuation 
+Pu();
+
+//The most used letter in the entire sentance 
+le();
+}
+
+
+void draw(){
+//Drawing the sentance on the app
+textSize(19);
+fill(0, 102, 153);
+text(sentence,10,40);
+  
+ 
+}
+
+//find out the length of the sentance
+void sl(){
+  fill(50);
+  text("This sentence is... " + sentence.length() + " characters long", 10,150);
+}
+
+
+//find out the total number of capital letters in the sentance
+void Cs(){
+for(int i = 0; i < sentence.length(); i++){
+char c = sentence.charAt(i);
+
+
+if (c >= 'A' && c <= 'Z') {
+NumberOC++;
+    }
+}
+  
+  
+text("The number of capital letters in the sentance is... " + NumberOC, 10, 200);
+}
+
+
+//find out the total number of vowels in the sentance
+void Vs(){
+for(int i = 0; i < sentence.length(); i++){
+char c = sentence.charAt(i);
+
+
+if (c =='a' || c =='A' || c == 'e' || c =='E' || c == 'i' || c =='I' || c == 'o' || c =='O' || c == 'u' || c == 'I') {
+NumberOV++;
+    }
+  }
+  
+  
+text("Number of vowels in the sentance is... " + NumberOV, 10, 250);
+}
+
+
+
+//Find out what the total number of vowels in the sentance is
+void Ws(){
+for (int i = 0; i < sentence.length(); i++) {
+
+String[] list = split(sentence, ' ');
+NumberOW = list.length;
+  }
+  
+  
+text("The Number of words in sentence is... " + NumberOW, 10, 300);
+}
+
+
+
+//Find out the total number of punctuation in the sentance
+void Pu(){
+      for(int i = 0; i < sentence.length(); i++){
+    char c = sentence.charAt(i);
+    if (c == '\'' || c == ':' || c ==  ';' || c == '.' || c == ',' || c == '!' || c == '?') {
+      NumberOP++;
+    }
+  }
+  
+  
+  text("Number of punctuation marks in the sentance is... " + NumberOP, 10, 350);
+}
+
+
+
+//Find out the most used letter in the sentance
+void le(){
+char[] lowercaseArray = sentence.toLowerCase().toCharArray();
+int[] allLetters = new int [26];
+for (int i = 0; i < lowercaseArray.length; i++) { 
+
+  
+if (lowercaseArray[i] >= 'a' && lowercaseArray[i] <='z') {
+allLetters[lowercaseArray[i]-'a']++;
+}
+ }
+  
+  
+  
+//find out what the most used letter is 
+for (int i = 0; i < allLetters.length; i++) {
+
+if (allLetters[i] > ML) {
+ML = allLetters[i];
+index = i;
+    }
+  }
+  
+  
+  
+char mostOccuringLetter = char('a' + index);
+text("The most used letter is... " + mostOccuringLetter , 10, 400);
+}
