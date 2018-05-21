@@ -1,33 +1,29 @@
-size(700,500);
-background(35, 230, 230);
-//the sun
-stroke(245, 200, 34);
-fill(246, 249, 44);
-ellipse(200,240,75,75);
 
-//the plane feild
-stroke(0);
-fill(39, 230, 51);
-rect(0, 252, 900, 400);
-
-//the house
-fill(200,70, 50);
-rect(450,213,125,75);
+size(800,500);
+//the sky
+background (127,255,212);
+//THE SUNNNNNNNNNNNNNNNNNNNNNNNNNNN
+fill(255,255,0);
+ellipse(250, 260, 120, 120);
+//the ground
+fill(124,252,0);
+rect(0, 250, 800, 400);
+//the house base (rect)
+fill(220,20,60);
+rect(520, 195, 150, 130);
+//The house roof (triangle)
 fill(0);
-triangle(440,213,585,213,512,173);
-fill(200);
-rect(500,220,32,62);
-fill(2);
-ellipse(507,255,10,10);
-stroke(246, 249, 44);
-strokeWeight(8);
-
-
-
-//sun rays
-line(200,245,135,240);
-line(200,245,150,200);
-line(200,245,170,185);
-line(200,245,220,185);
-line(200,245,245,195);
-line(200,245,270,240);
+triangle(510, 195, 680, 195, 595, 155);
+//the door
+fill(255,255,255);
+rect(575, 225, 40, 80);
+fill(0);
+ellipse(584, 268, 10, 10);
+//the suns rays
+strokeWeight(6);
+stroke(255,255,0);
+line(150, 240, 200, 240);
+line(165, 200, 270, 240);
+line(300, 240, 350, 240);
+line(220, 240, 350, 200);
+line(250, 240, 250, 160);
