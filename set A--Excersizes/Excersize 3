@@ -1,0 +1,15 @@
+
+void setup() {
+  //setting up the thing
+  size(450,1000);
+  background(0);
+}
+
+void draw() {
+  //the outline of the circle
+  stroke(mouseX,mouseY,mouseX+40);
+  //what fills the circle
+  fill(mouseX,mouseY,mouseX+40);
+  //the circle itself
+  ellipse(mouseX, mouseY, 68, 68);
+}
