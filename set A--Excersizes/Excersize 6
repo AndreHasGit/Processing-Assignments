@@ -1,0 +1,39 @@
+//my two variables
+//basically x and y but i ended up using a and b
+float a = 0;
+
+float b = 0;
+
+
+    void setup(){
+    size(500,1010);
+    background(255);
+    
+    //getting it like a rainbowish
+    colorMode(HSB,255,255,255);
+    // i dont have no stroke so it looks really tripopy, i like it this way
+                 }
+
+void draw(){
+a = 10;
+
+while(a <= width){
+a = a + 15;
+b = 0;
+
+while(b <= height){
+b = b + 15;
+
+if(a < mouseX && b < mouseY){
+rect(a,b,10,10);
+fill(a % 200, b, 200);
+ellipse(a,b,10,10);
+} else {
+  
+fill(255);
+ellipse(a,b,10,10);
+rect(a,b,30,30);
+}
+}
+}
+}
