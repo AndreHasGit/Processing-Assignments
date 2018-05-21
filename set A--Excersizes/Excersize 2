@@ -1,0 +1,45 @@
+ 
+void setup(){
+  size(900, 900);
+  background(120,10,80);
+}
+void draw(){
+   noFill();
+   // crazy randome colors for each stroke :D
+     for(int i=0; i<10; i=i+1) {
+      stroke(random(255),random(255),random(255));
+     }
+   
+   strokeWeight(9);
+   arc(460,400,600,600,PI,PI);
+   
+   
+   strokeWeight(14);
+   arc(490,390,600,600,PI,PI+HALF_PI);
+   
+   
+   strokeWeight(12);
+   arc(460,450,600,600,PI,PI+HALF_PI);
+   
+   
+   strokeWeight(13);
+   arc(5200,425,600,600,PI,PI+HALF_PI);
+   
+   
+   strokeWeight(9);
+   arc(400,325,600,600,0,PI-HALF_PI);
+   
+   
+   strokeWeight(14);
+   arc(420,315,600,600,0,PI-HALF_PI);
+   
+   
+   strokeWeight(11);
+   arc(400,350,600,600,0,PI-HALF_PI);
+   
+   
+   strokeWeight(12);
+   arc(550,200,600,600,0,HALF_PI);
+   
+
+}
