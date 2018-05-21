@@ -1,0 +1,36 @@
+//setting up all the stuff
+void setup(){
+size(390,980);
+background(255);
+noStroke();
+colorMode(300,250,350,250);
+noStroke();
+}
+// all my variables
+int  a= 400;
+float b= 0;
+float c= 0;
+
+float d= 0;
+float e= 0;
+float f= 0;
+float g=0;
+
+
+// getting the "variables to change sizes" 
+void draw()
+{
+ b += 0.8;
+ c += 0.3;
+ 
+ 
+ d += .4;
+ e += 4;
+ f += .5;
+ g += .3;
+ 
+ fill(b% 255,e % 255, 255);
+ ellipse(b,a,c,c);
+ ellipse(250,d,f,g);
+ 
+}
